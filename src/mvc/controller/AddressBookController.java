@@ -82,12 +82,15 @@ public class AddressBookController {
             Boolean flag = false;
             String name = contactDetailsPanel.getNameField().getText();
             String mobile = contactDetailsPanel.getMobileField().getText();
-            String email = contactDetailsPanel.geteMailField().getText();   
+            String email = contactDetailsPanel.geteMailField().getText();
+            String address = contactDetailsPanel.getaddressField().getText();
+                
+               
             flag = validate();
             if(flag)
             {    
              Person person = new Person();
-             person.setData(name,mobile,email);
+             person.setData(name,mobile,email,address);
              daoimplement.addPerson(person);
              dialog.getFrame().dispose();
              view.getMainGUIFrame().setVisible(true);
@@ -159,6 +162,7 @@ public class AddressBookController {
         dialog.getPanel().setName(detailPanel.getNameField().getText());
         dialog.getPanel().setMobile(detailPanel.getMobileField().getText());
         dialog.getPanel().seteMail(detailPanel.geteMailField().getText());
+        dialog.getPanel().setAddress(detailPanel.getaddressField().getText());
         view.getMainGUIFrame().setVisible(false);
         choiceListener = new ActionListener() {
             @Override
@@ -169,7 +173,9 @@ public class AddressBookController {
                 contactDetailsPanel = dialog.getPanel();
                 String name = contactDetailsPanel.getNameField().getText();
                 String mobile = contactDetailsPanel.getMobileField().getText();
-                String email = contactDetailsPanel.geteMailField().getText();   
+                String email = contactDetailsPanel.geteMailField().getText();  
+                String address; 
+                    address = contactDetailsPanel.getaddressField().getText();
                 flag = validate();
                 if(flag)
                 {    
@@ -235,7 +241,8 @@ public class AddressBookController {
          detailPanel.getNameField().setEditable(false);
          detailPanel.getMobileField().setEditable(false);
          detailPanel.geteMailField().setEditable(false);
-        }
+         detailPanel.getaddressField().setEditable(false);
+            }
     }  //loadPersons ends
     
     public void getSelectedPerson(String selectedName)

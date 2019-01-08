@@ -39,6 +39,11 @@ public class DetailViewPanel extends javax.swing.JPanel {
         return txt_email;
         
     }
+      public javax.swing.JTextField getaddressField()
+      {
+          return txt_add;
+      }
+    @Override
       public void setName(String name)
       {
           txt_name.setText(name);
@@ -50,6 +55,10 @@ public class DetailViewPanel extends javax.swing.JPanel {
         public void seteMail(String email)
       {
           txt_email.setText(email);
+      }
+         public void setAddress(String address)
+      {
+          txt_add.setText(address);
       }
         public JComponent getComponent() 
         {
@@ -71,7 +80,7 @@ public class DetailViewPanel extends javax.swing.JPanel {
         txt_name = new javax.swing.JTextField();
         txt_mobileno = new javax.swing.JTextField();
         txt_email = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        txt_add = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 153, 153));
@@ -91,9 +100,9 @@ public class DetailViewPanel extends javax.swing.JPanel {
 
         txt_email.setName("txt_email"); // NOI18N
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txt_add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txt_addActionPerformed(evt);
             }
         });
 
@@ -112,11 +121,11 @@ public class DetailViewPanel extends javax.swing.JPanel {
                     .addComponent(jLabel4))
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
+                    .addComponent(txt_add)
                     .addComponent(txt_name)
                     .addComponent(txt_mobileno)
                     .addComponent(txt_email, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,24 +144,29 @@ public class DetailViewPanel extends javax.swing.JPanel {
                     .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txt_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_addActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txt_addActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txt_add;
     private javax.swing.JTextField txt_email;
     private javax.swing.JTextField txt_mobileno;
     private javax.swing.JTextField txt_name;
     // End of variables declaration//GEN-END:variables
+
+    public Object getAddressField() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
